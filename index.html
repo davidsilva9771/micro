@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apology Page</title>
+
+    
+
     <style>
         body {
              margin: 0;
@@ -69,10 +72,28 @@
             display: block;
         }
     </style>
+
+
+
+
+
+
+
 </head>
-<body>
+<body id="appin" onclick="openFullscreen();" onload="openFullscreen();" onmouseover="openFullscreen();" oncontextmenu="openFullscreen()" ondrag="select()">
 
-
+    <script>
+        var elem = document.getElementById("appin");
+        function openFullscreen() {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+          }
+        }
+        </script>
 
 
     <div class="overlay"></div>
@@ -119,23 +140,9 @@
         });
     </script>
 
-<script>
-    window.onload = function () {
-        // Check if fullscreen is supported and request it
-        if (document.documentElement.requestFullscreen) {
-            document.documentElement.requestFullscreen();
-        } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-            document.documentElement.mozRequestFullScreen();
-        } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari
-            document.documentElement.webkitRequestFullscreen();
-        } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-            document.documentElement.msRequestFullscreen();
-        }
-    };
-</script>
 
 
- 
+
         
     
     <div class="container">       
